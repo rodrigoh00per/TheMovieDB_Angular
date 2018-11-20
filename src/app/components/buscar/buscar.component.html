@@ -1,0 +1,29 @@
+<br />
+<label for="exampleInputEmail1">BUSCAR</label>
+<input
+  type="text"
+  class="form-control"
+  aria-describedby="1Help"
+  name="pel_buscar"
+  (keyup.enter)="buscarpeli()"
+  [(ngModel)]="pel_buscar"
+  placeholder="Nombre de la Pelicula"
+/>
+<small id="1Help" class="form-text text-muted"
+  >Se mostraran de acuerdo a su popularidad</small
+>
+<br />
+<div *ngIf="_peliculasService.pelis_bus">
+  <div class="card-columns">
+    <div class="card" *ngFor="let peli of _peliculasService.pelis_bus">
+      <img class="card-img-top" [src]="peli|imagenesfiltro" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{peli.title}}</h5>
+        <p class="card-text">
+        {{peli.overview|slice:0:250}}...
+        </p>
+        <button class="btn btn-info" [routerLink]="['/pelicula',peli.id,'buscar_pag',pel_buscar]" >Ver mas...</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Peliculas App</h1>
+    <p class="lead">Este es un front end creado con angular y bootstrap</p>
+  </div>
+</div>
+
+<app-galeria [peliculas]="encartelera|slice:0:6" titulo="En Cartelera"></app-galeria>
+<app-galeria [peliculas]="populares" titulo="Populares"></app-galeria>
+<app-galeria [peliculas]="ninospelis" titulo="Para Niños"></app-galeria>

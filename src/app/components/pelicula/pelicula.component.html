@@ -1,0 +1,37 @@
+<br /><br />
+<div class="container m-2">
+  <div *ngIf="pelicula">
+    <div class="row m-4">
+      <div class="col col-md-4">
+        <img
+          [src]="pelicula | imagenesfiltro: true"
+          [alt]="pelicula.original_title"
+          class="img-thumbnail"
+        />
+      </div>
+      <div class="col col-col-md-6 ">
+        <h2>{{ pelicula.original_title }}</h2>
+
+        <p class="justify-content">{{ pelicula.overview }}</p>
+ <div *ngIf="pelicula.tagline!=''">
+        <h3>Frase Celebre</h3>
+        <p>{{ pelicula.tagline }}</p>
+</div>
+        <strong>Popularidad: </strong>
+        <span class="badge badge-primary"
+          >{{ pelicula.popularity | number: ".0-0" }}/100</span
+        >
+<p></p>
+        <strong>Puntuación:</strong>
+        <span class="badge badge-info">{{ pelicula.vote_average }}</span>
+        <br><br>
+       <div *ngIf="pagina=='inicio'"> 
+        <button class="btn btn-danger" [routerLink]="['/home']"  >Regresar</button>
+      </div>
+      <div *ngIf="pagina=='buscar_pag'"> 
+        <button class="btn btn-danger" [routerLink]="['/buscar',texto_bus]"  >Regresar</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
