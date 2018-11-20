@@ -1,27 +1,20 @@
 # Ejemplo11ApiPeliMovieDB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.7.
+APLICACION SPA DE PELICULAS
 
-## Development server
+Este proyecto fue generado con la Version 6.2.7 de Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Esta aplicacion consiste en el consumo de la API de la pagina www.themoviedb.org
+El cual esta API nos permite ver el detalle de peliculas tanto como para niños,que estan en cartelera, o buscar en especifico alguna que usted desee. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Consumimos el API atraves de JSONP debido a que no esta dentro del dominio.
 
-## Build
+Como framework de CSS se utilizo bootstrap.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Se hace uso de Formularios,Observables,pipes caso de que regrese un null en la imagen pueda mostrar una por defecto. 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Autor rodrigoh00per 
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
